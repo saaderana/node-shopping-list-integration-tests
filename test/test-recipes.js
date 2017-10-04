@@ -28,8 +28,8 @@ describe('Recipes', function(){
             res.body.should.have.length.of.at.least(1);
 
             res.body.forEach(function(item){
-                items.should.be.a('object');
-                items.should.include.keys('id','name','ingredients');
+                item.should.be.a('object');
+                item.should.include.keys('id','name','ingredients');
             });
         });
     });

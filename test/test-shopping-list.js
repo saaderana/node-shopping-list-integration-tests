@@ -43,7 +43,7 @@ describe('Shopping List', function(){
             res.should.have.status(201);
             res.should.be.json;
             res.body.should.be.a('object');
-            res.body.should.include,keys('id', 'name', 'checked');
+            res.body.should.include.keys('id', 'name', 'checked');
             res.body.id.should.not.be.null;
             res.body.shoud.deep.equal(Object.assign(newItem, {id: res.body.id}));
         });
