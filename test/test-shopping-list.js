@@ -45,7 +45,7 @@ describe('Shopping List', function(){
             res.body.should.be.a('object');
             res.body.should.include.keys('id', 'name', 'checked');
             res.body.id.should.not.be.null;
-            res.body.should.be.equal(Object.assign(newItem, {id: res.body.id}));
+            res.body.should.deep.equal(Object.assign(newItem, {id: res.body.id}));
         });
     });
     it('should update items on PUT', function(){
